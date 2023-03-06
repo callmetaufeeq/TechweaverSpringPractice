@@ -1,7 +1,8 @@
-package com.tw.service;
+package com.tw.serviceImpl;
 
 import com.tw.pojo.EMI;
 import com.tw.pojo.Offer;
+import com.tw.service.Insurance;
 
 public class BikeInsurance implements Insurance {
 	

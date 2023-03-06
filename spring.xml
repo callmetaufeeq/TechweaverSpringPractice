@@ -8,7 +8,7 @@
 
 
   <!-- P name space for setting the property values in bean like property tag -->
-	<bean id="bike" class="com.tw.service.BikeInsurance" p:id="123">
+	<bean id="bike" class="com.tw.serviceImpl.BikeInsurance" p:id="123">
 		<!--<property name="id" value="123"></property>-->
 		
 		<constructor-arg name="name" value="xyz"></constructor-arg>
