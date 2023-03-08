@@ -12,8 +12,12 @@ public class MainClass {
 		Insurance in = context.getBean("bike", Insurance.class);
 		System.out.println(in.showInsurance());
 		System.out.println(in.getE().showEMI());
-		context.close();
+//		context.close();
+		Insurance car = context.getBean("carInsu",Insurance.class);
+		System.out.println(car.showInsurance());
+//		System.out.println(car.getE().showEMI());
 
+		
 		/*
 		 * ClassPathXmlApplicationContext con=new
 		 * ClassPathXmlApplicationContext("spring.xml"); Insurance

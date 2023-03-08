@@ -19,4 +19,12 @@
 	
 	<bean id="offers" class="com.tw.pojo.Offer"></bean>
 	<bean id="emi" class="com.tw.pojo.EMI"></bean>
+	
+	<bean id="carInsu" class="com.tw.sohel.CarInsurance">
+		<property name="carName" value="Maruti"></property>
+		<property name="carModel" value="Suzuki"></property>
+		<property name="carPrice" value="549000"></property>
+		<property name="carEmi" value="19999"></property>
+		<property name="e" ref="emi"></property>
+	</bean>
 </beans>
