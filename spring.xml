@@ -7,19 +7,21 @@
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-  <!-- P name space for setting the property values in bean like property tag -->
-	<bean id="bike" class="com.tw.serviceImpl.BikeInsurance" p:id="123">
-		<!--<property name="id" value="123"></property>-->
-		
+	<!-- P name space for setting the property values in bean like property 
+		tag -->
+	<bean id="bike" class="com.tw.serviceImpl.BikeInsurance"
+		p:id="123">
+		<!--<property name="id" value="123"></property> -->
+
 		<constructor-arg name="name" value="xyz"></constructor-arg>
 		<constructor-arg name="validity" value="2023"></constructor-arg>
 		<constructor-arg name="offer" ref="offers"></constructor-arg>
 		<property name="e" ref="emi"></property>
 	</bean>
-	
+
 	<bean id="offers" class="com.tw.pojo.Offer"></bean>
 	<bean id="emi" class="com.tw.pojo.EMI"></bean>
-	
+
 	<bean id="carInsu" class="com.tw.sohel.CarInsurance">
 		<property name="carName" value="Maruti"></property>
 		<property name="carModel" value="Suzuki"></property>
@@ -27,7 +29,39 @@
 		<property name="carEmi" value="19999"></property>
 		<property name="e" ref="emi"></property>
 	</bean>
-	
-	<bean id="tractor" class="com.tw.serviceImpl.TractorInsurance" 
-	init-method="startTr" destroy-method="endTr"></bean>
+
+	<bean id="tractor" class="com.tw.serviceImpl.TractorInsurance"
+		init-method="startTr" destroy-method="endTr">
+		<constructor-arg>
+			<list>
+				<value> A  </value>
+				<value> B  </value>
+				<value> B  </value>
+			</list>
+		</constructor-arg>
+
+		<constructor-arg>
+			<set>
+				<value> A  </value>
+				<value> B  </value>
+				<value> B  </value>
+			</set>
+		</constructor-arg>
+
+		<constructor-arg>
+			<map>
+				<entry key="1" value="A"></entry>
+				<entry key="2" value="A"></entry>
+				<entry key="3" value="A"></entry>
+			</map>
+		</constructor-arg>
+		
+		<property name="map">
+			<map>
+				<entry key="A" value="AA"></entry>
+				<entry key="B" value="BB"></entry>
+				<entry key="C" value="CC"></entry>
+			</map>
+		</property>
+	</bean>
 </beans>
