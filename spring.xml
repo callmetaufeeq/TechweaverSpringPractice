@@ -27,4 +27,7 @@
 		<property name="carEmi" value="19999"></property>
 		<property name="e" ref="emi"></property>
 	</bean>
+	
+	<bean id="tractor" class="com.tw.serviceImpl.TractorInsurance" 
+	init-method="startTr" destroy-method="endTr"></bean>
 </beans>

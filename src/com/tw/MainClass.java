@@ -9,12 +9,12 @@ public class MainClass {
 	public static void main(String[] args) {
 
 		FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("spring.xml");
-		Insurance in = context.getBean("bike", Insurance.class);
-		System.out.println(in.showInsurance());
-		System.out.println(in.getE().showEMI());
+		//Insurance in = context.getBean("bike", Insurance.class);
+		//System.out.println(in.showInsurance());
+		//System.out.println(in.getE().showEMI());
 //		context.close();
-		Insurance car = context.getBean("carInsu",Insurance.class);
-		System.out.println(car.showInsurance());
+		//Insurance car = context.getBean("carInsu",Insurance.class);
+		//System.out.println(car.showInsurance());
 //		System.out.println(car.getE().showEMI());
 
 		
@@ -25,6 +25,10 @@ public class MainClass {
 		 * System.out.println(in.showInsurance());
 		 * System.out.println(in.getE().showEMI()); con.close();
 		 */
+		
+		Insurance tra=context.getBean("tractor",Insurance.class);
+		System.out.println(tra.showInsurance());
+		context.close();
 	}
 
 }
