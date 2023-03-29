@@ -7,6 +7,7 @@ public class CompanyImplement implements Company {
 
 	ArrayList<String> emp;
 	List<Double> salary;
+	public TC tcc;
 
 	public ArrayList<String> getEmp() {
 		return emp;
@@ -30,7 +31,7 @@ public class CompanyImplement implements Company {
 		System.out.println("hi");
 		System.out.println(emp);
 		System.out.println(salary);
-		
+		System.out.println(tcc);
 			}
 
 	@Override

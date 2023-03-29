@@ -6,7 +6,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-<bean id="com" class="company.faizan.CompanyImplement" >
+<bean id="com" class="company.faizan.CompanyImplement"  autowire="byName" >
 	<property name="emp">
 		<list>
 			<value>faiz</value>
@@ -17,7 +17,9 @@
 			<value>25000</value>
 		</list>
 	</property>
-	
-</bean>
 
+</bean>
+<bean id="tc" class="company.faizan.TC">
+	<property name="tc" value=" 15 terms and conditions"></property>
+</bean>
 </beans>

@@ -8,7 +8,8 @@ public class CompanyMain {
 
 		FileSystemXmlApplicationContext f = new FileSystemXmlApplicationContext("companyfaiz.xml");
 		Company c = f.getBean("com", Company.class);
-	
+		TC t=f.getBean("tc", TC.class);
+		System.out.println(t.tc);
 		c.showEmployee();
 	
 		
