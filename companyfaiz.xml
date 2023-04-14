@@ -19,7 +19,7 @@
 	</property>
 
 </bean>
-<bean id="tc" class="company.faizan.TC">
+<bean name="currentTc" id="tc" class="company.faizan.TC">
 	<property name="tc" value=" 15 terms and conditions"></property>
 </bean>
 </beans>
